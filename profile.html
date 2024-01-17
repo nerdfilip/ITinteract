@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITinteract - Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/logo-tableau.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a>
+                        <span class="icon">
+                            <ion-icon name="logo-tableau"></ion-icon>
+                        </span>
+                        <span class="title">ITinteract</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="grid-outline"></ion-icon>
+                        </span>
+                        <span class="title">DASHBOARD</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="onworking.html">
+                        <span class="icon">
+                            <ion-icon name="bookmarks-outline"></ion-icon>
+                        </span>
+                        <span class="title">ARTICLES</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="chat.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">CHAT</span>
+                    </a>
+                </li>
+
+                <li class="hovered">
+                    <a href="profile.html">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">MY PROFILE</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="onworking.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">SETTINGS</span>
+                    </a>
+                </li>
+
+                <li class="logout">
+                    <a href="account.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">LOGOUT</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- MAIN -->
+
+        <div class="main">
+            <div class="topbar">
+                <div class="textProfile">
+                    <span>Here you can see & edit your profile.</span>
+                </div>
+            </div>
+
+            <div class="profileCardsContainer">
+
+                <!-- User Details Card -->
+
+                <div class="userDetailsCard">
+                    <img src="assets/images/user.jpg" alt="Profile Picture">
+                    <div class="profileCardContent">
+                        <h2>Your Full Name</h2>
+                        <p>Gender: Your Gender</p>
+                        <p>Age: Your Age</p>
+                        <p>Address: Your Address</p>
+                        <p>Email: Your Email</p>
+                    </div>
+                </div>
+
+                <!-- Edit Profile Card -->
+
+                <div class="editProfileCard">
+                    <form id="editForm" action="/update-profile" method="post" enctype="multipart/form-data">
+                        <div class="profileInfo">
+                            <label for="photo">Profile Photo:</label>
+                            <input type="file" id="photo" name="photo">
+                        </div>
+
+                        <div class="profileInfo">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+                        </div>
+
+                        <div class="profileInfo">
+                            <label for="gender">Gender:</label>
+                            <select id="gender" name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="profileInfo">
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" placeholder="Your Age" required>
+                        </div>
+
+                        <div class="profileInfo">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="address" placeholder="Your Address" required>
+                        </div>
+
+                        <div class="profileInfo">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+</body>
+</html>
+
+<script src="assets/js/main.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const editForm = document.getElementById('editForm');
+        const userDetailsCard = document.querySelector('.userDetailsCard');
+
+        editForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById('fullName').value;
+            const gender = document.getElementById('gender').value;
+            const age = document.getElementById('age').value;
+            const address = document.getElementById('address').value;
+            const email = document.getElementById('email').value;
+
+            const capitalizedGender = gender.charAt(0).toUpperCase() + gender.slice(1);
+
+            userDetailsCard.querySelector('h2').textContent = fullName;
+            userDetailsCard.querySelector('p:nth-of-type(1)').textContent = 'Gender: ' + capitalizedGender;
+            userDetailsCard.querySelector('p:nth-of-type(2)').textContent = 'Age: ' + age;
+            userDetailsCard.querySelector('p:nth-of-type(3)').textContent = 'Address: ' + address;
+            userDetailsCard.querySelector('p:nth-of-type(4)').textContent = 'Email: ' + email;
+
+            // Handle file upload
+            const photoInput = document.getElementById('photo');
+            const photoFile = photoInput.files[0];
+
+            if (photoFile) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    userDetailsCard.querySelector('img').src = e.target.result;
+                };
+
+                reader.readAsDataURL(photoFile);
+            }
+        });
+    });
+</script>

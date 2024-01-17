@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITinteract - Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/logo-tableau.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a>
+                        <span class="icon">
+                            <ion-icon name="logo-tableau"></ion-icon>
+                        </span>
+                        <span class="title">ITinteract</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="grid-outline"></ion-icon>
+                        </span>
+                        <span class="title">DASHBOARD</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="onworking.html">
+                        <span class="icon">
+                            <ion-icon name="bookmarks-outline"></ion-icon>
+                        </span>
+                        <span class="title">ARTICLES</span>
+                    </a>
+                </li>
+
+                <li class="hovered">
+                    <a href="chat.html">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">CHAT</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">MY PROFILE</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="onworking.html">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">SETTINGS</span>
+                    </a>
+                </li>
+
+                <li class="logout">
+                    <a href="account.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">LOGOUT</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- MAIN -->
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="text">
+                    <span>How can we help you?</span>
+                </div>
+
+                <div class="user">
+                    <a href="profile.html">
+                        <img src="assets/images/user.jpg" alt="You">
+                    </a>
+                </div>
+            </div>
+
+            <div class="supportCard">
+                <div class="supportCardContent">
+                    <h2>Support Chatbox</h2>
+                    <p>
+                        Embark on a journey with our helpful bots designed to assist you on your quest for knowledge!
+                    </p>
+                    <p>
+                        Uncover the fascinating world of information as you explore the depths of hard skills through our immersive training quiz.
+                        Our bots are here to guide you, refine your capabilities, and make learning a delightful experience!
+                    </p>
+                    <p>
+                        Get ready to level up, conquer challenges, and emerge as a skilled champion in the diverse and ever-evolving field of hard skills.
+                        Let the journey begin!
+                    </p>
+                    <p>
+                        Feel free to ask our bots anything, and they'll do their best to assist you with their limited but friendly answers. Happy exploring!
+                    </p>
+                </div>
+                <img src="assets/images/supportrobot.jpg" alt="Our Support">
+            </div>
+
+            <!-- Chat Section -->
+            <div class="chatCard">
+                <div class="chatCardContent">
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Chat messages will be displayed here -->
+                    </div>
+                </div>
+                <div class="user-input">
+                    <input type="text" id="input-field" placeholder="Type your message...">
+                    <button id="send-btn" onclick="sendMessage()">SEND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="assets/js/chat.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

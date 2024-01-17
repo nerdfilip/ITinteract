@@ -1,0 +1,54 @@
+.question {
+  text-align: left;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 56%; /* Consider increasing this if there's more space available */
+}
+
+.options {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px; /* Space between radio button and label */
+}
+
+.options label {
+  margin-left: 8px;
+  flex-grow: 1; /* Allows the label to fill the available space */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis to overflow text */
+}
+
+.submit-button:hover {
+  background-color: #25356A;
+}
+
+.question-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 10px;
+}
+.answer-input {
+  margin-bottom: 10px; /* Adds space below the input box */
+}
+
+.submit-button {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+#review-container button {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

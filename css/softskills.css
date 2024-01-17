@@ -1,0 +1,133 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #25356A;
+    font-size: 16px; /* Increase the font size */
+}
+
+header {
+    font-family: "Poppins", sans-serif;
+    background-color: #56C5F5;
+    color: #fff;
+    text-align: center;
+    padding: 1.2em;
+    font-size: 1rem; /* Increase the font size */
+}
+
+section {
+    font-family: "Poppins", sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px; /* Increase the padding */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+    align-items: flex-end;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-top: -10px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    margin-right: -40px;
+}
+
+label {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    transition: font-weight 0.3s ease;
+    width: 100%;
+}
+
+label:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: relative;
+    height: 30px; /* Increase the height */
+    width: 30px; /* Increase the width */
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Increase the border-radius */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox-container:hover .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #56C5F5;
+    border: 1px solid #56C5F5;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    content: "";
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+button {
+    background-color: #56C5F5;
+    color: #ffffff;
+    padding: 15px 30px; /* Increase the padding */
+    border: none;
+    border-radius: 8px; /* Increase the border-radius */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    letter-spacing: 1px;;
+    margin-top: 20px;
+    margin-left: 622px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    button:hover {
+        background-color: #25356A;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }

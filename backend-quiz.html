@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/backend.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/review-style.css">
+    <title>ITinteract - Backend Tags</title>
+    <link rel="icon" href="assets/images/logo-tableau.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <h1>ITinteract - Interviews</h1>
+    </header>
+
+    <section id="backend-tags">
+        <h2>Backend Tags</h2>
+        <p>Select 4 tags to generate a quiz.</p>
+        <form id="tag-form">
+            <label for="tag-nodejs">
+                <input type="checkbox" id="tag-nodejs" name="tag" value="Node.js" onclick="handleCheckboxSelection()">
+                Node.js
+            </label>
+
+            <label for="tag-expressjs">
+                <input type="checkbox" id="tag-expressjs" name="tag" value="Express.js" onclick="handleCheckboxSelection()">
+                Express.js
+            </label>
+
+            <label for="tag-restful-apis">
+                <input type="checkbox" id="tag-restful-apis" name="tag" value="RESTful APIs" onclick="handleCheckboxSelection()">
+                RESTful APIs
+            </label>
+
+            <label for="tag-database-design">
+                <input type="checkbox" id="tag-database-design" name="tag" value="Database Design" onclick="handleCheckboxSelection()">
+                Database Design
+            </label>
+
+            <label for="tag-sql">
+                <input type="checkbox" id="tag-sql" name="tag" value="SQL" onclick="handleCheckboxSelection()">
+                SQL
+            </label>
+
+            <label for="tag-nosql">
+                <input type="checkbox" id="tag-nosql" name="tag" value="NoSQL" onclick="handleCheckboxSelection()">
+                NoSQL
+            </label>
+
+            <label for="tag-authentication">
+                <input type="checkbox" id="tag-authentication" name="tag" value="Authentication" onclick="handleCheckboxSelection()">
+                Authentication
+            </label>
+
+            <label for="tag-microservices">
+                <input type="checkbox" id="tag-microservices" name="tag" value="Microservices" onclick="handleCheckboxSelection()">
+                Microservices
+            </label>
+            </label>
+            <button type="button" onclick="generateQuiz()">Generate Quiz</button>
+        </form>
+    </section>
+    <section id="review-container" style="display: none;">
+        <div style="margin-top: 20px;"></div>
+        <button id="restart-button">Restart Quiz</button>
+       
+        <p id="score">Your Score: 0 / 0</p>
+        <div id="answers">
+            <!-- Here the users answers will be displayed and whether they are correct or not -->
+        </div>
+    </section>
+</body>
+</html>
+
+<script src="assets/js/backend-quiz.js"></script>

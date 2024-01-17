@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/backend.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/review-style.css">
+
+    <title>Networking Tags - ITinteract</title>
+</head>
+<body>
+    <header>
+        <h1>ITinteract - Interviews</h1>
+    </header>
+    
+    <section id="backend-tags">
+        <h2>Networking Tags</h2>
+        <p>Select 4 tags to generate a quiz.</p>    
+        <form id="tag-form">
+            <label for="tag-networking">
+                <input type="checkbox" id="tag-networking" name="tag" value="Networking" onclick="handleCheckboxSelection()">
+                Networking
+            </label>
+            
+            <label for="tag-tcp-ip">
+                <input type="checkbox" id="tag-tcp-ip" name="tag" value="TCP/IP" onclick="handleCheckboxSelection()">
+                TCP/IP
+            </label>
+            
+            <label for="tag-dns">
+                <input type="checkbox" id="tag-dns" name="tag" value="DNS" onclick="handleCheckboxSelection()">
+                DNS
+            </label>
+            
+            <label for="tag-firewalls">
+                <input type="checkbox" id="tag-firewalls" name="tag" value="Firewalls" onclick="handleCheckboxSelection()">
+                Firewalls
+            </label>
+            
+            <label for="tag-routing">
+                <input type="checkbox" id="tag-routing" name="tag" value="Routing" onclick="handleCheckboxSelection()">
+                Routing
+            </label>
+            
+            <label for="tag-subnetting">
+                <input type="checkbox" id="tag-subnetting" name="tag" value="Subnetting" onclick="handleCheckboxSelection()">
+                Subnetting
+            </label>
+            
+            <label for="tag-load-balancing">
+                <input type="checkbox" id="tag-load-balancing" name="tag" value="Load Balancing" onclick="handleCheckboxSelection()">
+                Load Balancing
+            </label>
+            
+            <label for="tag-network-security">
+                <input type="checkbox" id="tag-network-security" name="tag" value="Network Security" onclick="handleCheckboxSelection()">
+                Network Security
+            </label>
+            
+            <label for="tag-vpn">
+                <input type="checkbox" id="tag-vpn" name="tag" value="VPN" onclick="handleCheckboxSelection()">
+                VPN
+            </label>
+            
+            <label for="tag-wireless-networks">
+                <input type="checkbox" id="tag-wireless-networks" name="tag" value="Wireless Networks" onclick="handleCheckboxSelection()">
+                Wireless Networks
+            </label>
+            
+            <button type="button" onclick="generateQuiz()">Generate Quiz</button>
+        </form>
+    </section>
+    <section id="review-container" style="display: none;">
+        <div style="margin-top: 20px;"></div>
+        <button id="restart-button">Restart Quiz</button>
+       
+        <p id="score">Your Score: 0 / 0</p>
+        <div id="answers">
+            <!-- Aici vor fi afișate răspunsurile utilizatorului și dacă sunt corecte sau nu -->
+        </div>
+    </section>
+    <script src="assets/js/networking-quiz.js" defer></script>
+    
+</body>
+</html>

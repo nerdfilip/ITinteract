@@ -1,0 +1,13 @@
+#score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #25356a;
+}
+
+#answers > p {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

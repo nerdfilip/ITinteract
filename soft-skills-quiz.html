@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/softskills.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <title>ITinteract - Soft Skills</title>
+    <link rel="icon" href="assets/images/logo-tableau.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <h1>ITinteract - Soft Skills Interviews</h1>
+    </header>
+    
+    <section id="soft-skills-tags">
+        <h2>Soft Skills Tags</h2>
+        <p>Select 4 tags to generate a quiz.</p>
+        <form id="tag-form">
+            <label for="tag-communication">
+                <input type="checkbox" id="tag-communication" name="tag" value="Communication" onclick="handleCheckboxSelection()">
+                Effective Communication
+            </label>
+
+            <label for="tag-teamwork">
+                <input type="checkbox" id="tag-teamwork" name="tag" value="Teamwork" onclick="handleCheckboxSelection()">
+                Team Collaboration
+            </label>
+
+            <label for="tag-problem-solving">
+                <input type="checkbox" id="tag-problem-solving" name="tag" value="Problem Solving" onclick="handleCheckboxSelection()">
+                Problem Solving Skills
+            </label>
+
+            <label for="tag-critical-thinking">
+                <input type="checkbox" id="tag-critical-thinking" name="tag" value="Critical Thinking" onclick="handleCheckboxSelection()">
+                Critical Thinking Abilities
+            </label>
+
+            <label for="tag-adaptability">
+                <input type="checkbox" id="tag-adaptability" name="tag" value="Adaptability" onclick="handleCheckboxSelection()">
+                Adaptability in Work
+            </label>
+
+            <label for="tag-time-management">
+                <input type="checkbox" id="tag-time-management" name="tag" value="Time Management" onclick="handleCheckboxSelection()">
+                Time Management Skills
+            </label>
+
+            <label for="tag-leadership">
+                <input type="checkbox" id="tag-leadership" name="tag" value="Leadership" onclick="handleCheckboxSelection()">
+                Leadership Qualities
+            </label>
+
+            <label for="tag-emotional-intelligence">
+                <input type="checkbox" id="tag-emotional-intelligence" name="tag" value="Emotional Intelligence" onclick="handleCheckboxSelection()">
+                Emotional Intelligence
+            </label>
+
+            <label for="tag-conflict-resolution">
+                <input type="checkbox" id="tag-conflict-resolution" name="tag" value="Conflict Resolution" onclick="handleCheckboxSelection()">
+                Conflict Resolution Skills
+            </label>
+        </form>
+        <button type="button" onclick="generateQuiz()">Generate Quiz</button>
+    </section>
+    <div id="quiz-container"></div>
+    <section id="question-section" style="display: none;">
+        <div id="question-box">
+            <!-- The question text will be inserted here by JavaScript -->
+            <p id="current-question"></p>
+            <textarea id="answer-input" rows="4" placeholder="Type your answer here..."></textarea>
+            <button type="button" id="submit-answer">Submit Answer</button>
+        </div>
+    </section>
+    <section id="review-container" style="display: none;">
+        <div style="margin-top: 20px;"></div>
+        <button id="restart-button">Restart Quiz</button>
+       
+        <div id="answers">
+            <!-- Here will be displayed the user's answers and whether they are correct or not. -->
+        </div>
+    </section>
+</body>
+</html>
+
+<script src="assets/js/softskill-quiz.js"></script>
