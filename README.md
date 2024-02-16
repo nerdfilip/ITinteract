@@ -43,6 +43,8 @@ Enhances the user experience on ITinteract by providing a direct and real-time c
 5. Complete a Hard Skills quiz & share with us your result!
 6. Try any functionalities of this application.
 
+**Or you can use this link to access our web application: https://nerdfilip.github.io/ITinteract/**
+
 # Important
 Remember this application is a college project made by only 2 people. We are aware that not all futures work, but in the future we want the entire application to be fully functional. This is an Alpha version, a start. Thank you for understanding!
 
